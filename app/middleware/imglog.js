@@ -5,12 +5,9 @@ module.exports = options => {
   return async function imglog(ctx, next) {
 
     debug('请求来了');
-    debug('-------------------------this.ctx----------------');
-    debug('%O', ctx);
-    debug('-------------------------this.ctx.request----------------');
-    debug('%O', ctx.request);
-    debug('-------------------------this.ctx.headers----------------');
-    debug('%O', ctx.headers);
+    debug('-------------------------headers----------------');
+    debug('%O', ctx.request.headers);
+    debug('-------------------------ip----------------');
     debug('%O', ctx.ip);
 
     await next();
